@@ -7,81 +7,9 @@
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
 		<link rel="preload" href="/assets/fonts/Work_Sans/WorkSans-VariableFont_wght.ttf" as="font">
+		<link rel="preload" href="/assets/css/main.css" as="style">
 
-		<style>
-			@font-face {
-				font-family: Work Sans;
-				font-display: swap;
-				src: url(/assets/fonts/Work_Sans/WorkSans-VariableFont_wght.ttf);
-			}
-			:root {
-				--min-font-size: 14px;
-				--max-font-size: 18px;
-				font-size: clamp(var(--min-font-size), calc(1vw + 1vh + 0.5vmin), var(--max-font-size));
-			}
-
-			*,
-			*::before,
-			*::after {
-				box-sizing: inherit;
-			}
-
-			a {
-				color: #5E81AC;
-			}
-
-			html,
-			body {
-				background: #2E3440;
-			}
-
-			html {
-				box-sizing: border-box;
-			}
-
-			body {
-				font-size: 1rem;
-				font-family: Work Sans, sans-serif;
-				line-height: 1.5;
-				display: grid;
-				grid-template-columns: 1fr;
-				grid-template-rows: 1fr 1fr;
-				height: 100vh;
-				margin: 0 3em;
-				color: #ECEFF4;
-			}
-
-			@media screen and (min-width: 40em) {
-				body {
-					width: 40em;
-					margin-right: auto;
-					margin-left: auto;
-				}
-			}
-
-			header {
-				display: flex;
-				flex-direction: column;
-				justify-content: flex-end;
-			}
-
-			h1, p {
-				margin: 0;
-				padding: 0;
-			}
-
-			h1 {
-				font-size: 3rem;
-				font-weight: 300;
-				line-height: 1;
-				letter-spacing: -2px;
-			}
-
-			h1 + p {
-				font-size: 1.5rem;
-				font-weight: 400;
-			}
-		</style>
+		<link rel="stylesheet" href="/assets/css/main.css">
 	</head>
 	<body>
 
