@@ -7,7 +7,17 @@
 :root {
 	--min-font-size: 14px;
 	--max-font-size: 18px;
+	--color-background: #ECEFF4;
+	--color-text: #2E3440;
+	--color-link: #5E81AC;
 	font-size: clamp(var(--min-font-size), calc(1vw + 1vh + 0.5vmin), var(--max-font-size));
+}
+
+@media screen and (prefers-color-scheme: dark) {
+	:root {
+		--color-background: #2E3440;
+		--color-text: #ECEFF4;
+	}
 }
 
 *,
@@ -17,12 +27,12 @@
 }
 
 a {
-	color: #5E81AC;
+	color: var(--color-link);
 }
 
 html,
 body {
-	background: #2E3440;
+	background: var(--color-background);
 }
 
 html {
@@ -38,7 +48,7 @@ body {
 	grid-template-rows: 1fr 1fr;
 	height: 100vh;
 	margin: 0 3em;
-	color: #ECEFF4;
+	color: var(--color-text);
 }
 
 @media screen and (min-width: 40em) {
