@@ -81,3 +81,31 @@ h1 + p {
 	font-size: 1.5rem;
 	font-weight: 400;
 }
+
+.vcard {
+	margin-top: 3ex;
+}
+
+.vcard > div {
+	margin-top: 1.5ex;
+}
+
+@media screen and (min-width: 40em) {
+	.vcard {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+.vcard h2 {
+	font-size: 1.125rem;
+	font-weight: 600;
+	margin: 0;
+}
+
+.adr ol,
+.adr li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
