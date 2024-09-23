@@ -105,3 +105,9 @@ main {
 	margin: 0;
 	color: var(--clr-subtext);
 }
+
+main code {
+	font-size: 1.125rem;
+	font-weight: 900;
+	display: block;
+}
