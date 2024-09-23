@@ -62,7 +62,7 @@ body {
 	block-size: 100dvh;
 	margin: 0;
 	padding-block: 1em;
-	padding-inline: 2em;
+	padding-inline: 1.25em;
 	color: var(--clr-text);
 	background-color: var(--clr-base);
 }
