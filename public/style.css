@@ -1,0 +1,107 @@
+:root {
+	--font-size-min: 12px;
+	--font-size-max: 28px;
+	--font-size-viewport-base: calc(1svi + 1svb + 0.5vmin + 0.5em);
+	--font-size-root: clamp(var(--font-size-min), var(--font-size-viewport-base), var(--font-size-max));
+
+	/* Catppuccin (Light: Latté; Dark: Mocha) */
+	--clr-rosewater: light-dark(#DC8A78, #F5E0DC);
+	--clr-flamingo: light-dark(#DD7878, #F2CDCD);
+	--clr-pink: light-dark(#EA76CB, #F5C2E7);
+	--clr-mauve: light-dark(#8839EF, #CBA6F7);
+	--clr-red: light-dark(#D20F39, #F38BA8);
+	--clr-maroon: light-dark(#E64553, #EBA0AC);
+	--clr-peach: light-dark(#FE640B, #FAB387);
+	--clr-yellow: light-dark(#DF8E1D, #F9E2AF);
+	--clr-green: light-dark(#40A02B, #A6E3A1);
+	--clr-teal: light-dark(#179299, #94E2D5);
+	--clr-sky: light-dark(#04A5E5, #89DCEB);
+	--clr-sapphire: light-dark(#209FB5, #74C7EC);
+	--clr-blue: light-dark(#1E66F5, #89B4FA);
+	--clr-lavender: light-dark(#7287FD, #B4BEFE);
+	--clr-text: light-dark(#4C4F69, #A6ADC8);
+	--clr-subtext0: light-dark(#6C6F85, #5C5F77);
+	--clr-overlay2: light-dark(#7C7F93, #9399B2);
+	--clr-overlay1: light-dark(#8C8FA1, #7F849C);
+	--clr-overlay0: light-dark(#9CA0B0, #6C7086);
+	--clr-surface2: light-dark(#ACB0BE, #585B70);
+	--clr-surface1: light-dark(#BCC0CC, #45475A);
+	--clr-surface0: light-dark(#CCD0DA, #313244);
+	--clr-base: light-dark(#EFF1F5, #1E1E2E);
+	--clr-mantle: light-dark(#E6E9EF, #181825);
+	--clr-crust: light-dark(#DCE0E8, #11111B);
+
+	color-scheme: dark light;
+	font-size: var(--font-size-root);
+	font-family: system-ui, sans-serif;
+	font-synthesis: none;
+	line-height: 1.5;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	height: 100vh;
+}
+
+body {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	grid-template-columns: 1fr;
+	place-items: center start;
+	grid-gap: 1em;
+	block-size: 100dvh;
+	margin: 0;
+	padding-block: 1em;
+	padding-inline: 2em;
+	color: var(--clr-text);
+	background-color: var(--clr-base);
+}
+
+@media screen and (min-width: 60em) {
+	body {
+		inline-size: max-content;
+		margin-inline: auto;
+	}
+}
+
+p {
+	margin: 0;
+}
+
+strong {
+	font-weight: 900;
+	color: var(--clr-red);
+}
+
+header {
+	margin: 0;
+}
+
+main {
+	margin: 0;
+}
+
+.clr-peach {
+	color: var(--clr-peach);
+}
+
+.t-muted {
+	color: var(--clr-subtext0);
+}
+
+[role="banner"] {
+	font-size: 2rem;
+	line-height: 1;
+	margin: 0;
+	color: var(--clr-subtext);
+}
