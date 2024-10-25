@@ -106,6 +106,17 @@ main {
 	color: var(--clr-subtext);
 }
 
+main del {
+	color: var(--clr-surface2);
+}
+
+main ins {
+	font-weight: 900;
+	text-transform: uppercase;
+	text-decoration-style: double;
+	color: var(--clr-red);
+}
+
 main code {
 	font-size: 1.125rem;
 	font-weight: 900;
