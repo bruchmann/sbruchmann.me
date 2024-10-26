@@ -65,7 +65,7 @@ body {
 
 @media screen and (min-width: 60em) {
 	body {
-		inline-size: max-content;
+		inline-size: min(70ch, 100svi - (1.25em * 2));
 		margin-inline: auto;
 	}
 }
@@ -116,5 +116,5 @@ main ins {
 main code {
 	font-size: 1.125rem;
 	font-weight: 900;
-	display: block;
+	white-space: nowrap;
 }
