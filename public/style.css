@@ -87,7 +87,7 @@ main {
 	margin: 0;
 }
 
-.clr-peach {
+.t-peach {
 	color: var(--clr-peach);
 }
 
@@ -95,6 +95,9 @@ main {
 	color: var(--clr-subtext0);
 }
 
+.t-pink {
+	color: var(--clr-pink);
+}
 [role="banner"] {
 	font-size: 2rem;
 	line-height: 1;
