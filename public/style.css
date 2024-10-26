@@ -55,7 +55,7 @@ body {
 	grid-template-columns: 1fr;
 	place-items: center start;
 	grid-gap: 1em;
-	block-size: 100dvh;
+	min-block-size: 100dvh;
 	margin: 0;
 	padding-block: 1em;
 	padding-inline: 1.25em;
