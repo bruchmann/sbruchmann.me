@@ -1,3 +1,15 @@
+@keyframes fluff {
+	0% {
+		scale: 0;
+		opacity: 1;
+	}
+
+	100% {
+		scale: 2;
+		opacity: 0;
+	}
+}
+
 *,
 *::before,
 *::after {
@@ -98,6 +110,7 @@ main {
 .t-pink {
 	color: var(--clr-pink);
 }
+
 [role="banner"] {
 	font-size: 2rem;
 	line-height: 1;
@@ -110,10 +123,22 @@ main del {
 }
 
 main ins {
+	position: relative;
 	font-weight: 900;
 	text-transform: uppercase;
 	text-decoration-style: double;
 	color: var(--clr-red);
+}
+
+main ins::before {
+	pointer-events: none;
+	content: "PERMANENTLY";
+	position: absolute;
+	animation: fluff 2s infinite ease forwards;
+	animation-delay: 1s;
+	transform-origin: center;
+	opacity: 0;
+	text-decoration: inherit;
 }
 
 main code {
