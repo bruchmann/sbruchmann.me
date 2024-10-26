@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
 :root {
 	--font-size-min: 12px;
 	--font-size-max: 28px;
@@ -31,7 +37,7 @@
 	--clr-mantle: light-dark(#E6E9EF, #181825);
 	--clr-crust: light-dark(#DCE0E8, #11111B);
 
-	color-scheme: dark light;
+	box-sizing: border-box;
 	font-size: var(--font-size-root);
 	font-family: system-ui, sans-serif;
 	font-synthesis: none;
@@ -40,17 +46,7 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: 100%;
-}
-
-*,
-*::before,
-*::after {
-	box-sizing: inherit;
-}
-
-html {
-	box-sizing: border-box;
-	height: 100vh;
+	color-scheme: dark light;
 }
 
 body {
