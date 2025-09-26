@@ -7,6 +7,18 @@
 		url("/assets/fonts/atkinson_hyperlegible_next/variable.ttf") format("truetype");
 }
 
+@property --font-weight-bold {
+	syntax: "<number>";
+	initial-value: 700;
+	inherits: true;
+}
+
+@property --font-weight-regular {
+	syntax: "<number>";
+	initial-value: 400;
+	inherits: true;
+}
+
 :root {
 	--font-size--2: clamp(0.6076rem, 0.507rem + 0.5034cqi, 0.96rem);
 	--font-size--1: clamp(0.7292rem, 0.5946rem + 0.6726cqi, 1.2rem);
@@ -54,6 +66,7 @@
 	font-size: var(--font-size-0);
 	font-family: Atkinson Hyperlegible Next, system-ui, sans-serif;
 	font-synthesis: none;
+	font-weight: var(--font-weight-regular);
 	line-height: 1.5;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -62,6 +75,11 @@
 	color-scheme: light dark;
 	color: var(--clr-tx);
 	background-color: var(--clr-bg);
+
+	@media (prefers-color-scheme: dark) {
+		--font-weight-bold: 600;
+		--font-weight-regular: 300;
+	}
 }
 
 ::selection {
@@ -83,6 +101,7 @@ main {
 
 h1 {
 	font-size: var(--font-size-5);
+	font-weight: var(--font-weight-bold);
 	text-wrap: pretty;
 	margin: 0;
 }
