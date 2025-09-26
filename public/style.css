@@ -1,148 +1,92 @@
-@keyframes fluff {
-	0% {
-		scale: 0;
-		opacity: 1;
-	}
-
-	100% {
-		scale: 2;
-		opacity: 0;
-	}
-}
-
-*,
-*::before,
-*::after {
-	box-sizing: inherit;
+@font-face {
+	font-family: Atkinson Hyperlegible Next;
+	font-display: swap;
+	font-weight: 100 900;
+	src:
+		local("Atkinson Hyperlegible Next"),
+		url("/assets/fonts/atkinson_hyperlegible_next/variable.ttf") format("truetype");
 }
 
 :root {
-	--font-size-min: 12px;
-	--font-size-max: 28px;
-	--font-size-viewport-base: calc(1svi + 1svb + 0.5vmin + 0.5em);
-	--font-size-root: clamp(var(--font-size-min), var(--font-size-viewport-base), var(--font-size-max));
+	--font-size--2: clamp(0.6076rem, 0.507rem + 0.5034cqi, 0.96rem);
+	--font-size--1: clamp(0.7292rem, 0.5946rem + 0.6726cqi, 1.2rem);
+	--font-size-0: clamp(0.875rem, 0.6964rem + 0.8929cqi, 1.5rem);
+	--font-size-1: clamp(1.05rem, 0.8143rem + 1.1786cqi, 1.875rem);
+	--font-size-2: clamp(1.26rem, 0.9504rem + 1.5482cqi, 2.3438rem);
+	--font-size-3: clamp(1.512rem, 1.1069rem + 2.0253cqi, 2.9297rem);
+	--font-size-4: clamp(1.8144rem, 1.2865rem + 2.6396cqi, 3.6621rem);
+	--font-size-5: clamp(2.1773rem, 1.4915rem + 3.4291cqi, 4.5776rem);
 
-	/* Catppuccin (Light: Latté; Dark: Mocha) */
-	--clr-rosewater: light-dark(#DC8A78, #F5E0DC);
-	--clr-flamingo: light-dark(#DD7878, #F2CDCD);
-	--clr-pink: light-dark(#EA76CB, #F5C2E7);
-	--clr-mauve: light-dark(#8839EF, #CBA6F7);
-	--clr-red: light-dark(#D20F39, #F38BA8);
-	--clr-maroon: light-dark(#E64553, #EBA0AC);
-	--clr-peach: light-dark(#FE640B, #FAB387);
-	--clr-yellow: light-dark(#DF8E1D, #F9E2AF);
-	--clr-green: light-dark(#40A02B, #A6E3A1);
-	--clr-teal: light-dark(#179299, #94E2D5);
-	--clr-sky: light-dark(#04A5E5, #89DCEB);
-	--clr-sapphire: light-dark(#209FB5, #74C7EC);
-	--clr-blue: light-dark(#1E66F5, #89B4FA);
-	--clr-lavender: light-dark(#7287FD, #B4BEFE);
-	--clr-text: light-dark(#4C4F69, #A6ADC8);
-	--clr-subtext0: light-dark(#6C6F85, #5C5F77);
-	--clr-overlay2: light-dark(#7C7F93, #9399B2);
-	--clr-overlay1: light-dark(#8C8FA1, #7F849C);
-	--clr-overlay0: light-dark(#9CA0B0, #6C7086);
-	--clr-surface2: light-dark(#ACB0BE, #585B70);
-	--clr-surface1: light-dark(#BCC0CC, #45475A);
-	--clr-surface0: light-dark(#CCD0DA, #313244);
-	--clr-base: light-dark(#EFF1F5, #1E1E2E);
-	--clr-mantle: light-dark(#E6E9EF, #181825);
-	--clr-crust: light-dark(#DCE0E8, #11111B);
+	--spacing-3xs: clamp(0.25rem, 0.2143rem + 0.1786cqi, 0.375rem);
+	--spacing-2xs: clamp(0.4375rem, 0.3482rem + 0.4464cqi, 0.75rem);
+	--spacing-xs: clamp(0.6875rem, 0.5625rem + 0.625cqi, 1.125rem);
+	--spacing-s: clamp(0.875rem, 0.6964rem + 0.8929cqi, 1.5rem);
+	--spacing-m: clamp(1.3125rem, 1.0446rem + 1.3393cqi, 2.25rem);
+	--spacing-l: clamp(1.75rem, 1.3929rem + 1.7857cqi, 3rem);
+	--spacing-xl: clamp(2.625rem, 2.0893rem + 2.6786cqi, 4.5rem);
+	--spacing-2xl: clamp(3.5rem, 2.7857rem + 3.5714cqi, 6rem);
+	--spacing-3xl: clamp(5.25rem, 4.1786rem + 5.3571cqi, 9rem);
 
-	box-sizing: border-box;
-	font-size: var(--font-size-root);
-	font-family: system-ui, sans-serif;
+	--spacing-3xs-2xs: clamp(0.25rem, 0.1071rem + 0.7143cqi, 0.75rem);
+	--spacing-2xs-xs: clamp(0.4375rem, 0.2411rem + 0.9821cqi, 1.125rem);
+	--spacing-xs-s: clamp(0.6875rem, 0.4554rem + 1.1607cqi, 1.5rem);
+	--spacing-s-m: clamp(0.875rem, 0.4821rem + 1.9643cqi, 2.25rem);
+	--spacing-m-l: clamp(1.3125rem, 0.8304rem + 2.4107cqi, 3rem);
+	--spacing-l-xl: clamp(1.75rem, 0.9643rem + 3.9286cqi, 4.5rem);
+	--spacing-xl-2xl: clamp(2.625rem, 1.6607rem + 4.8214cqi, 6rem);
+	--spacing-2xl-3xl: clamp(3.5rem, 1.9286rem + 7.8571cqi, 9rem);
+
+	--spacing-s-l: clamp(0.875rem, 0.2679rem + 3.0357cqi, 3rem);
+
+	--clr-black: #100F0F;
+	--clr-paper: #FFFCF0;
+	--clr-base-200: #CECDC3;
+	--clr-base-500: #878580;
+	--clr-base-600: #6F6E69;
+
+	--clr-bg: light-dark(var(--clr-paper), var(--clr-black));
+	--clr-tx: light-dark(var(--clr-black), var(--clr-base-200));
+	--clr-tx-2: light-dark(var(--clr-base-600), var(--clr-base-500));
+
+	font-size: var(--font-size-0);
+	font-family: Atkinson Hyperlegible Next, system-ui, sans-serif;
 	font-synthesis: none;
 	line-height: 1.5;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: 100%;
-	color-scheme: dark light;
+	color-scheme: light dark;
+	color: var(--clr-tx);
+	background-color: var(--clr-bg);
 }
 
 body {
 	display: grid;
-	grid-template-rows: auto 1fr auto;
-	grid-template-columns: 1fr;
-	place-items: center start;
-	grid-gap: 1em;
-	min-block-size: 100dvh;
+	grid-template-rows: 1fr min-content;
+	min-block-size: 100svb;
 	margin: 0;
-	padding-block: 1em;
-	padding-inline: 1.25em;
-	color: var(--clr-text);
-	background-color: var(--clr-base);
-}
-
-@media screen and (min-width: 60em) {
-	body {
-		inline-size: min(70ch, 100svi - (1.25em * 2));
-		margin-inline: auto;
-	}
-}
-
-p {
-	margin: 0;
-}
-
-strong {
-	font-weight: 900;
-	color: var(--clr-red);
-}
-
-header {
-	margin: 0;
+	padding: 0 var(--spacing-m-l);
 }
 
 main {
+	align-self: center;
+}
+
+h1 {
+	font-size: var(--font-size-5);
+	text-wrap: pretty;
 	margin: 0;
 }
 
-.t-peach {
-	color: var(--clr-peach);
-}
-
-.t-muted {
-	color: var(--clr-subtext0);
-}
-
-.t-pink {
-	color: var(--clr-pink);
-}
-
-[role="banner"] {
-	font-size: 2rem;
-	line-height: 1;
+p {
+	font-size: var(--font-size-4);
+	text-wrap: balance;
 	margin: 0;
-	color: var(--clr-subtext);
 }
 
-main del {
-	color: var(--clr-surface2);
-}
-
-main ins {
-	position: relative;
-	font-weight: 900;
-	text-transform: uppercase;
-	text-decoration-style: double;
-	color: var(--clr-red);
-}
-
-main ins::before {
-	pointer-events: none;
-	content: "PERMANENTLY";
-	position: absolute;
-	animation: fluff 2s infinite ease forwards;
-	animation-delay: 1s;
-	transform-origin: center;
-	opacity: 0;
-	text-decoration: inherit;
-}
-
-main code {
-	font-size: 1.125rem;
-	font-weight: 900;
-	white-space: nowrap;
+footer {
+	align-self: end;
+	padding: var(--spacing-xs-s);
+	color: var(--clr-tx-2);
 }
