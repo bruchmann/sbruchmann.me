@@ -87,6 +87,6 @@ p {
 
 footer {
 	align-self: end;
-	padding: var(--spacing-xs-s);
+	padding: var(--spacing-xs-s) 0;
 	color: var(--clr-tx-2);
 }
