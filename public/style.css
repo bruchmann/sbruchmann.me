@@ -95,6 +95,28 @@ body {
 	padding: 0 var(--spacing-m-l);
 }
 
+body::after {
+	content: "";
+	display: block;
+	block-size: var(--spacing-3xs-2xs);
+	inline-size: 100svi;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background-image:
+		linear-gradient(to right,
+		#CE5D97 20%,
+		#4385BE 20%,
+		#4385BE 40%,
+		#D0A215 40%,
+		#D0A215 60%,
+		#8B7EC8 60%,
+		#8B7EC8 80%,
+		#D14D41 80%,
+		#D14D41
+	);
+}
+
 main {
 	align-self: center;
 }
