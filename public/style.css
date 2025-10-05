@@ -7,6 +7,12 @@
 		url("/assets/fonts/atkinson_hyperlegible_next/variable.ttf") format("truetype");
 }
 
+@property --font-weight-black {
+	syntax: "<number>";
+	initial-value: 900;
+	inherits: true;
+}
+
 @property --font-weight-bold {
 	syntax: "<number>";
 	initial-value: 700;
@@ -77,6 +83,7 @@
 	background-color: var(--clr-bg);
 
 	@media (prefers-color-scheme: dark) {
+		--font-weight-bold: 800;
 		--font-weight-bold: 600;
 		--font-weight-regular: 300;
 	}
@@ -115,6 +122,10 @@ body::after {
 		#D14D41 80%,
 		#D14D41
 	);
+}
+
+b {
+	font-weight: var(--font-weight-black);
 }
 
 main {
