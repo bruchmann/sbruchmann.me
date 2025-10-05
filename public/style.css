@@ -59,14 +59,17 @@
 	--clr-black: #100F0F;
 	--clr-paper: #FFFCF0;
 	--clr-base-200: #CECDC3;
+	--clr-base-300: #B7B5AC;
 	--clr-base-500: #878580;
 	--clr-base-600: #6F6E69;
+	--clr-base-700: #575653;
 	--clr-cyan-400: #3AA99F;
 	--clr-cyan-600: #24837B;
 
 	--clr-bg: light-dark(var(--clr-paper), var(--clr-black));
 	--clr-tx: light-dark(var(--clr-black), var(--clr-base-200));
 	--clr-tx-2: light-dark(var(--clr-base-600), var(--clr-base-500));
+	--clr-tx-3: light-dark(var(--clr-base-300), var(--clr-base-700));
 	--clr-cy: light-dark(var(--clr-cyan-600), var(--clr-cyan-400));
 
 	font-size: var(--font-size-0);
@@ -149,4 +152,17 @@ footer {
 	align-self: end;
 	padding: var(--spacing-xs-s) 0;
 	color: var(--clr-tx-2);
+}
+
+footer span:last-child {
+	align-self: center;
+	font-size: var(--font-size--2);
+	color: var(--clr-tx-3);
+}
+
+@media (width >= 32em) {
+	footer {
+		display: flex;
+		justify-content: space-between;
+	}
 }
