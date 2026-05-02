@@ -9,6 +9,10 @@
 
 	<style>
 		:root {
+			--black: #100F0F;
+			--paper: #FFFCF0;
+			--base-200: #CECDC3;
+
 			font-family: system-ui, sans-serif;
 			font-size: clamp(1em, 1em + 0.25vmin, 1.5em);
 			font-synthesis: none;
@@ -17,6 +21,13 @@
 			-moz-osx-font-smoothing: grayscale;
 			line-height: 1.5;
 			color-scheme: dark light;
+			color: var(--black);
+			background-color: var(--paper);
+
+			@media (prefers-color-scheme: dark) {
+				color: var(--base-200);
+				background-color: var(--black);
+			}
 		}
 
 		html {
