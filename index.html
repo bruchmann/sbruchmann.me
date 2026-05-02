@@ -8,12 +8,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<style>
+		@font-face {
+			font-family: Atkinson Hyperlegible Mono;
+			font-style: normal;
+			font-weight: 200 800;
+			font-display: swap;
+			src:
+				local("Atkinson Hyperlegible Mono"),
+				url("/atkinson-variable-mono.ttf");
+		}
+
 		:root {
 			--black: #100F0F;
 			--paper: #FFFCF0;
 			--base-200: #CECDC3;
 
-			font-family: system-ui, sans-serif;
+			font-family: monospace;
 			font-size: clamp(1em, 1em + 0.25vmin, 1.5em);
 			font-synthesis: none;
 			text-rendering: optimizeLegibility;
