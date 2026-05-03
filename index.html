@@ -24,7 +24,7 @@
 			--base-200: #CECDC3;
 
 			font-family: monospace;
-			font-size: clamp(1em, 1em + 0.25vmin, 1.5em);
+			font-size: clamp(1em, 1em + 0.5vmin, 1.5em);
 			font-synthesis: none;
 			text-rendering: optimizeLegibility;
 			-webkit-font-smoothing: antialiased;
@@ -50,10 +50,14 @@
 			min-block-size: 100svb;
 			margin: 0;
 		}
-		
+
 		p {
-			margin: 0;
+			margin: 0 2.5vmax;
 			text-wrap: pretty;
+		}
+
+		.line {
+			display: block;
 		}
 	</style>
 
@@ -61,7 +65,10 @@
 </head>
 
 <body>
-	<p>There was a website here. It's gone now.</p>
+	<p>
+		<span class="line">There was a website here.</span>
+		<span class="line">It's gone now.</span>
+	</p>
 </body>
 
 </html>
