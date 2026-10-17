@@ -18,11 +18,62 @@
 				url("/atkinson-variable-mono.ttf");
 		}
 
-		:root {
+		@keyframes flickering {
+			0% {
+				opacity: 0;
+			}
+
+			10% {
+				opacity: 1;
+			}
+
+			14% {
+				opacity: 0;
+			}
+
+			16% {
+				opacity: 1;
+			}
+
+			22% {
+				opacity: 0;
+			}
+
+			42% {
+				opacity: 1;
+			}
+
+			58% {
+				opacity: 0;
+			}
+
+			78% {
+				opacity: 1;
+			}
+
+			78% {
+				opacity: 0;
+			}
+
+			85% {
+				opacity: 1;
+			}
+
+			98% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+
+		html {
 			--black: #100F0F;
 			--paper: #FFFCF0;
 			--base-200: #CECDC3;
 
+			scrollbar-gutter: stable;
 			font-family: monospace;
 			font-size: clamp(1em, 1em + 0.5vmin, 1.5em);
 			font-synthesis: none;
@@ -40,10 +91,6 @@
 			}
 		}
 
-		html {
-			scrollbar-gutter: stable;
-		}
-
 		body {
 			display: grid;
 			place-content: center;
@@ -52,12 +99,28 @@
 		}
 
 		p {
-			margin: 0 2.5vmax;
-			text-wrap: pretty;
+			font-size: max(1.5rem, 25svmin);
+			font-weight: 800;
+			line-height: 1;
+			margin: 0;
+			white-space: nowrap;
 		}
 
 		.line {
 			display: block;
+		}
+
+		.line.nzs,
+		.line.afd {
+			animation: flickering 3s infinite linear;
+		}
+
+		.line.nzs {
+		}
+
+		.line.afd {
+			margin-block-start: -1lh;
+			animation-delay: 0.2s;
 		}
 	</style>
 
@@ -66,8 +129,9 @@
 
 <body>
 	<p>
-		<span class="line">There was a website here.</span>
-		<span class="line">It's gone now.</span>
+		<span class="line">FCK</span>
+		<span class="line nzs">NZS</span>
+		<span class="line afd">AFD</span>
 	</p>
 </body>
 
