@@ -18,53 +18,13 @@
 				url("/atkinson-variable-mono.ttf");
 		}
 
-		@keyframes flickering {
-			0% {
-				opacity: 0;
+		@keyframes scroll {
+			from {
+				transform: translateX(100%);
 			}
 
-			10% {
-				opacity: 1;
-			}
-
-			14% {
-				opacity: 0;
-			}
-
-			16% {
-				opacity: 1;
-			}
-
-			22% {
-				opacity: 0;
-			}
-
-			42% {
-				opacity: 1;
-			}
-
-			58% {
-				opacity: 0;
-			}
-
-			78% {
-				opacity: 1;
-			}
-
-			78% {
-				opacity: 0;
-			}
-
-			85% {
-				opacity: 1;
-			}
-
-			98% {
-				opacity: 0;
-			}
-
-			100% {
-				opacity: 1;
+			to {
+				transform: translateX(-100%);
 			}
 		}
 
@@ -104,6 +64,16 @@
 			line-height: 1;
 			margin: 0;
 			white-space: nowrap;
+			margin: 0 2.5vmax;
+			text-wrap: pretty;
+			white-space: nowrap;
+			margin: 0;
+			border-block-width: 0.25lh;
+			border-inline-width: 0;
+			border-style: solid;
+			border-color: #AF3029;
+			overflow: hidden;
+			position: relative;
 		}
 
 		.line {
@@ -112,15 +82,12 @@
 
 		.line.nzs,
 		.line.afd {
-			animation: flickering 3s infinite linear;
-		}
-
-		.line.nzs {
+			animation: scroll 3s infinite linear;
 		}
 
 		.line.afd {
 			margin-block-start: -1lh;
-			animation-delay: 0.2s;
+			animation-delay: -1.5s;
 		}
 	</style>
 
